@@ -1,0 +1,34 @@
+.footer {
+    background-color: $background-dark;
+    color: white;
+    padding: 3em 1em 3em 3em;
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        line-height: 1.8em;
+        font-size: 1.2em;
+        font-weight: 300;
+        padding: 0;
+        @include ipad-only {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        li:nth-child(1) {
+            font-family: "Shrikhand";
+            font-size: 1.5em;
+            margin: 0.6em 0em 0.6em 0em;
+        }
+        li:nth-child(2) {
+            i {
+                margin-right: 1em;
+            }
+        }
+        li:nth-child(3) {
+            i {
+                margin-right: 0.7em;
+            }
+        }
+    }
+}

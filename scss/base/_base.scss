@@ -1,0 +1,43 @@
+* {
+    font-family: "Roboto";
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul li {
+    list-style: none;
+}
+
+button {
+    background: linear-gradient(to left top, $primary-color 0%, $secondary-color 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 1em 1.8em 1em 1.8em;
+    box-shadow: 0px 4px 4px #dadada;
+    margin: 0.5em 0em 1em 0em;
+    &:hover {
+        opacity: 80%;
+        cursor: pointer;
+    }
+}
+
+.like-icon {
+    color: $third-color-font;
+    cursor: pointer;
+    &:hover::before {
+        background: linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        transition: 500ms ease-out;
+    }
+}

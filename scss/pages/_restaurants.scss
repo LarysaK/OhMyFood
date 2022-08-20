@@ -1,0 +1,165 @@
+.header__restaurants {
+    box-shadow: none; 
+}
+
+
+.restaurants-inspect {
+    &--background {
+        img{
+            width: 100%;
+            max-height:260px;
+            object-fit: cover;
+        }
+    }
+    &__menu {
+        background-color: $background-pale;
+        padding: 3em 2em 1em 2em;
+        border-radius: 20px 20px 0px 0px;
+        margin-top: -2em;
+        @include mobile-only {
+            padding: 2.5em 1.5em 2em 1.5em;
+        }
+        &--title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2 {
+                font-family: "Shrikhand";
+                font-size: 1.7em;
+                @include mobile-only {
+                    width: 40%;
+                }
+            }
+            i {
+                margin-right: 0.5em;
+            }
+        }
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        margin: 1em 0em 3.5em 0em;
+        @include mobile-only {
+            margin: 0.5em 0em 1.8em 0em;
+        }
+    }
+}
+
+
+.menu-card-block {
+    display: flex;
+    justify-content: space-between;
+    @include ipad-only {
+        flex-direction: column;
+        margin-top: 1em;
+    }
+
+}
+
+.menu-card {
+    margin: 2.5em 0em 2em 0em;
+    width: 100%;
+    @include ipad-only {
+    margin: 1em 0em 1em 0em;    
+    }
+    &__title {
+        h3 {
+            border-bottom: 3px solid $third-color;
+            width: 2.5em;
+            line-height: 1.9em;
+            font-weight: 300;
+            font-size: 1.1em;
+        }
+    }
+    &__component {
+        background-color: white;
+        border-radius: 15px;
+        width: 94%;
+        margin: 1.2em 0em 1.2em 0em;
+        box-shadow: 3px 3px 14px #d8d8d8;
+        position: relative;
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include mobile-only {
+            width: 100%;
+        }
+        &--title {
+            padding: 1em 1em 1em 1em;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 65%;
+            @include ipad-only {
+                width: 55%;
+            }
+            @include mobile-only {
+                width: 65%;
+            }
+            h4 {
+            margin: 0;
+            font-weight: 500;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            }
+            span {
+                font-weight: 300;
+            }
+        }
+        &--price {
+            position: relative;
+            span {
+                position: absolute;
+                font-weight: 500;
+                right: 1em;
+                bottom: 1em;
+            }
+        }
+        &--check {
+            color: white;
+            font-size: 1.7em;
+            height: 100%;
+            padding: 0 0.7em;
+            border-radius: 0px 15px 15px 0px;
+            background-color: $third-color;
+            position: absolute;
+            top: 0;
+            right: -1.5em;
+            display: none;
+        }
+    }
+}
+
+
+/** Component Animation **/
+
+.menu-card__component:hover .card-price {
+    padding-right: 4em;
+    transition: 0.5s ease;
+}
+
+.menu-card__component:hover .menu-card__component--check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide 0.5s ease forwards;
+}
+
+.fa-circle-check {
+    animation: rotate 0.6s ease-in-out;
+}
+
+/** MENU ANIMATIONS**/
+
+.menu-card {
+    &__component {
+    animation: appear 1.5s ease-in-out forwards;
+    }
+}
+@for $i from 0 to 9 {
+    .delay-#{$i} {
+        animation-delay:  #{$i/10}s;
+    }
+}

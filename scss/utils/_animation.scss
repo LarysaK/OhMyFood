@@ -1,0 +1,55 @@
+/* loading animation*/
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(1em);
+}
+    75% {
+        transform: translateY(-1em);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes loader {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* menu card appear animation */
+@keyframes appear {
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+  /* menu card check animation */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-40px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+    transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

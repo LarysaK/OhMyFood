@@ -1,0 +1,23 @@
+/** Primary color **/                                    
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$third-color: #99E2D0;
+
+/** Font color **/
+$primary-color-font: black;
+$secondary-color-font: #353535;
+$third-color-font: lightgrey;
+$accent-color-font: #048968;
+
+/** Hover & active **/
+$hover-color: #f5edff;
+
+/** Background color **/
+$background-pale: #f6f6f6;
+$background-light: #eaeaea;
+$background-dark: #353535;
+
+
+/** Breakpoints **/
+
+$breakpoints: ( mobile: 680px, ipad: 990px, desktop: 1200px );    
